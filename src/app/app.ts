@@ -11,4 +11,7 @@ import { Home } from './home/home';
 export class App {
   title='My-first app';
   Hero:string='Shaktiman';
+
+  age:number=21;
+  carList=['BMW','TATA','Nano'];
 }

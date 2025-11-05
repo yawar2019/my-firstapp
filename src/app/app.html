@@ -3,5 +3,37 @@
 
 <h3>{{Hero}}</h3>
 
+@if (age>18) {
+  <p>you can vote</p>
+} @else if(age==18) {
+  <p>you can vote welcome for firt time you are giving vote</p>
+}
+@else{
+  <p>not elligible to vote</p>
+}
+
+
+@switch (age) {
+  @case (18) {
+    <p>welcome to vote first time </p>
+  }
+    @case (20) {
+    <p>Elligible for Voting</p>
+  }
+
+
+  @default {
+    <p>cannot vote</p>
+  }
+}
+
+
+@for (item of carList ; track item) {  
+  <ul>
+    <li>{{item}}</li>
+  </ul>
+}
+
+
 
 <x></x>
