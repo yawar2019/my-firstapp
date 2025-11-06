@@ -14,4 +14,10 @@ export class App {
 
   age:number=21;
   carList=['BMW','TATA','Nano'];
+
+  sports=[
+    {id:1,name:'Football'}
+   ,{id:2,name:'Cricket'},
+     {id:3,name:'Kabadi'}]
+
 }
