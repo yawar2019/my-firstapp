@@ -52,6 +52,39 @@ These variables are always available with these names, but can be aliased via a 
 
 
 
+@for (item of carList ; track item) {  
+  <ul>
+    <li>{{item}}</li>
+  </ul>
+}
+
+@for (item of sports; track item.id; let idx = $index, e = $even,o=$odd,first=$first,last=$last,count=$count) {
+Item #{{ idx }}: {{ item.name }} {{e}}-{{o}}-{{first}}--{{last}}--{{count}}<br>
+}
+
+@for (item of sports; track item.id; let idx = $index,f=$first ) {
+ <p [style.color]="f ? 'green' : 'red'">{{item.name}}</p><br>
+}
+
+<table>
+  <thead>
+    <tr>
+      <th>sno</th>
+    <th>id</th>
+    <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+@for (item of sports; track item.id; let idx = $index,e=$even ) {
+ <tr [style.color]="e ? 'green' : 'red'">
+  <td>{{idx+1}}</td>
+  <td>{{item.id}}</td>
+  <td>{{item.name}}</td>
+ </tr>
+}
+</tbody>
+</table>
+
 
 
 
