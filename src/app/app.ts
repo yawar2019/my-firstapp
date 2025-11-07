@@ -20,4 +20,7 @@ export class App {
    ,{id:2,name:'Cricket'},
      {id:3,name:'Kabadi'}]
 
+     xyz="myRedclass";
+     boomboom="first";
+     firstclassArray=['first','second']
 }

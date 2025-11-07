@@ -1,4 +1,4 @@
-<h1>hello world this is next day</h1>
+<h1 id="" name="" [attr.grade]="title">hello world this is next day</h1>
 <h2>{{title}}</h2>
 
 <h3>{{Hero}}</h3>
@@ -62,4 +62,15 @@ Item #{{ idx }}: {{ item.name }} {{e}}-{{o}}-{{first}}--{{last}}--{{count}}<br>
 </table>
 
 
+<div [attr.grade]="title">hello</div>
+<input type="text" [value]="Hero" [attr.stdage]="age"/>
+<p [attr.name]="Hero">haha</p>
+<!-- 
+---------------------------------- -->
+
+
+ <p class="myRedclass">hello</p> <!-- right -->
+ <h1 [class]="xyz">hello2</h1> <!-- right -->
+<span [class]="boomboom">dream come true</span>
+<p [class]="firstclassArray">class Array Example</p>
 <x></x>
