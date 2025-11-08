@@ -22,7 +22,8 @@ simplest binding we use bracket {{}}
 Attribute Binding:
 
 
-it is used to connect aproperty  from the component to html elements attribute
+it is used to connect a property  from the component 
+to html elements attribute
 
 
 <div [attr.title]='name'>

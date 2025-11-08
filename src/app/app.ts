@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Home } from './home/home';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Home],
+  imports: [RouterOutlet,Home,FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -19,8 +20,13 @@ export class App {
     {id:1,name:'Football'}
    ,{id:2,name:'Cricket'},
      {id:3,name:'Kabadi'}]
-
+      isAvailable=false;
      xyz="myRedclass";
      boomboom="first";
      firstclassArray=['first','second']
-}
+     firstclassObj={first:false,second:true};
+
+    firstStyle={"color":"blue","background-color":"orange"};
+    secondStyle=this.isAvailable?'green':'red';
+    UserName="Hameshwar";
+    }
