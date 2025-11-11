@@ -29,4 +29,25 @@ export class App {
     firstStyle={"color":"blue","background-color":"orange"};
     secondStyle=this.isAvailable?'green':'red';
     UserName="Hameshwar";
+
+  // fun= ()=>{
+
+  // }
+
+  fun()
+  {
+    console.log('Good Morning Guys');
+  }
+
+fun2()
+  {
+    alert('I am Iron Man');
+  }
+
+  fun3(a:any)
+  {
+    alert('I am Iron Man '+a);
+  }
+
+
     }

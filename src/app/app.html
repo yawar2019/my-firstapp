@@ -78,4 +78,8 @@ Item #{{ idx }}: {{ item.name }} {{e}}-{{o}}-{{first}}--{{last}}--{{count}}<br>
 <p [style.color]="secondStyle">Second Style</p>
 <input type="text" [(ngModel)]="UserName">
 {{UserName}}
+{{fun()}}
+
+<button  (click)="fun2()">Click Me</button>
+<button  (click)="fun3('who became Dr Doom')">Click Me</button>
 <x></x>
