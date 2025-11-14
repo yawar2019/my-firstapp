@@ -22,7 +22,7 @@ export class Home {
 
   GoToAbout()
   {
-   this.router.navigateByUrl("/about/1/test")
+   this.router.navigateByUrl("/about/1/test?page=1&search=Radha")
    // this.router.navigate(["/about",1,'test']);
   }
 
