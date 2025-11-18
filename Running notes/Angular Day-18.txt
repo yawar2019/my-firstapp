@@ -71,6 +71,89 @@ this.apps.setAuthDetails('false')
 }
 
 
+when you navigating from one page to another page by clicking navigation button
+
+and we want user to not to access resource then implement Guard Service
+
+In Guard Service name is AppGuard Service
+
+
+here we are going to implement canActivate method
+
+
+
+
+CanActivate return either true or false
+
+
+In Our App.route ts,
+
+ {path:'about/:id/:name',component:About,canActivate:[AppGuardService]},
+
+
+CanActivate Child restrict for childRoute
+
+
+
+
+ {path:"contact",
+    component:Contact,
+    children:[{path:':id/:name',component:User,canActivateChild:[AppGuardService]}]
+    },
+
+
+canActivateChild it is boolean value true or false we we need to return
+
+
+if it is true child route will be accessable else not
+
+ {path:"contact",
+    component:Contact,
+    children:[{path:':id/:name',component:User,canActivateChild:[AppGuardService]},
+        
+    ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -9,9 +9,13 @@ import { Login } from './login/login';
 export const routes: Routes = [
     {path:'',component:Home},
    {path:'login',component:Login},
-    {path:'about/:id/:name',component:About,canActivate:[AppGuardService]},
+    {path:'about/:id/:name',component:About,
+        canActivateChild:[AppGuardService]
+    },
     {path:"contact",
     component:Contact,
-    children:[{path:':id/:name',component:User}]
+    children:[{path:':id/:name',component:User,canActivateChild:[AppGuardService]},
+        
+    ]
     },
 ];
