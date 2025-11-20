@@ -5,5 +5,5 @@ import { Home } from './app/home/home';
 import { Contact } from './app/contact/contact';
 import { Layout } from './app/layout/layout';
 
-bootstrapApplication(Layout, appConfig  )
+bootstrapApplication(App, appConfig  )
   .catch((err) => console.error(err));

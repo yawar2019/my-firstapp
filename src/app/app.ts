@@ -2,16 +2,17 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Home } from './home/home';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Home,FormsModule],
+  imports: [RouterOutlet,Home,FormsModule,CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   title='My-first app';
-  Hero:string='Shaktiman';
+  Hero:string='Heman';
 
   age:number=21;
   carList=['BMW','TATA','Nano'];

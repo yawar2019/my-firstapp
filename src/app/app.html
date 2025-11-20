@@ -82,4 +82,46 @@ Item #{{ idx }}: {{ item.name }} {{e}}-{{o}}-{{first}}--{{last}}--{{count}}<br>
 
 <button  (click)="fun2()">Click Me</button>
 <button  (click)="fun3('who became Dr Doom')">Click Me</button>
+
+<p [ngClass]="xyz" class="second third">Pyara Mohan</p>
+<p [ngStyle]="firstStyle" style="font-size: xx-large;">Hello Style</p>
+<hr>
+
+<p *ngIf="isAvailable; then IFBlock ; else ElseBlock">
+  Pinky and Brain
+</p>
+<ng-template #IFBlock>
+ <span> Pinky is Female mouse </span>   <!-- true -->
+</ng-template>
+<ng-template #ElseBlock>
+ <span> Brain is Male mouse </span>   <!-- false -->
+</ng-template>
+
+<hr>
+
+<div [ngSwitch]="Hero">
+<div *ngSwitchCase="'Spiderman'">Spiderman</div>
+<div *ngSwitchCase="'Ironman'">Ironman</div>
+<div *ngSwitchCase="'Heman'">Heman</div>
+<div *ngSwitchDefault>Wonderwomen</div>
+</div>
+
+<hr>
+
+<div *ngFor="let car of carList">
+<ul>
+  <li>{{car}}</li>
+</ul>
+</div>
+
+
+<hr>
+
+<div *ngFor="let sport of sports">
+<ul>
+  <li>{{sport.id}}</li>
+  <li>{{sport.name}}</li>
+</ul>
+</div>
+
 <x></x>
