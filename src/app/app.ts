@@ -3,10 +3,13 @@ import { RouterOutlet } from '@angular/router';
 import { Home } from './home/home';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { AppHighlightTextDirectives } from './app-highlight-text-directives';
+import { RedTextHighlightColor } from './red-text-highlight-color';
+import { Hero } from './hero/hero';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Home,FormsModule,CommonModule],
+  imports: [RouterOutlet,Home,FormsModule,CommonModule,AppHighlightTextDirectives,RedTextHighlightColor,Hero],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -49,6 +52,9 @@ fun2()
   {
     alert('I am Iron Man '+a);
   }
+
+
+// How to  Pass data from parent Component to child?
 
 
     }
