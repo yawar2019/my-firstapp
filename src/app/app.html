@@ -125,5 +125,8 @@ Item #{{ idx }}: {{ item.name }} {{e}}-{{o}}-{{first}}--{{last}}--{{count}}<br>
 </div>
 <div appAppHighlightTextDirectives>Hello Directives</div>
 <div appRedTextHighlightColor>Great wall of Directives</div>
- <app-hero [parentData]="Hero"></app-hero> <!--app-hero child component parentData is input -->
-<x></x>
+ <app-hero [parentData]="Hero"  (childData)="message=$event" ></app-hero> <!--app-hero child component parentData is input -->
+<br>
+child data ia m displaying {{message}}
+
+ <x></x>

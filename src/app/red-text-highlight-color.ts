@@ -10,9 +10,9 @@ export class RedTextHighlightColor implements OnInit {
   this.renderer.setStyle(this.element.nativeElement,"color","red");
   }
 
-  @HostListener('click') onclick(event:Event)
-  {
-  this.renderer.setStyle(this.element.nativeElement,"color","Blue");
+  // @HostListener('click') onclick(event:Event)
+  // {
+  // this.renderer.setStyle(this.element.nativeElement,"color","Blue");
 
-  }
+  // }
 }

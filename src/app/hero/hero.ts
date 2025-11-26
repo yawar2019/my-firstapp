@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, input, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
@@ -9,4 +9,10 @@ import { Component, Input } from '@angular/core';
 export class Hero {
 
   @Input() parentData:string="";
+  @Output() childData=new  EventEmitter();
+
+  sendChildDataInfo()
+  {
+    this.childData.emit('Got Child Data');
+  }
 }

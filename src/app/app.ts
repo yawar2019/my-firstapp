@@ -33,7 +33,7 @@ export class App {
     firstStyle={"color":"blue","background-color":"orange"};
     secondStyle=this.isAvailable?'green':'red';
     UserName="Hameshwar";
-
+message="";
   // fun= ()=>{
 
   // }
