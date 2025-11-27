@@ -1,9 +1,16 @@
 <form class="row g-3 needs-validation" #stdForm="ngForm">
   <div class="col-md-4">
     <label for="validationCustom01" class="form-label">First name</label>
-    <input type="text" class="form-control" name="firstName" [(ngModel)]="studentObj.firstName" value="Mark" required>
-    <div class="valid-feedback">
-      Looks good!
+    <input type="text" #fname="ngModel" class="form-control" name="firstName" [(ngModel)]="studentObj.firstName" value="Mark" minlength="3" required>
+    <div class="text-danger">
+     @if(fname.errors?.['required'] && fname.touched && fname.dirty)
+     {
+ required
+     }
+      @if(fname.errors?.['minlength'] && fname.touched && fname.dirty)
+     {
+ limit 3 characters only allowed
+     }
     </div>
   </div>
   <div class="col-md-4">
@@ -59,6 +66,6 @@
     </div>
   </div>
   <div class="col-12">
-    <button class="btn btn-primary" type="button" (click)="OnSubmit()">Submit form</button>
+    <button class="btn btn-primary" type="button" [disabled]="!stdForm.valid" (click)="OnSubmit()">Submit form</button>
   </div>
 </form>

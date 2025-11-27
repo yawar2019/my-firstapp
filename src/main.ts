@@ -7,5 +7,5 @@ import { Layout } from './app/layout/layout';
 import { SimpleTemplateForm } from './app/simple-template-form/simple-template-form';
 import { ReactiveFormExample } from './app/reactive-form-example/reactive-form-example';
 
-bootstrapApplication(ReactiveFormExample, appConfig  )
+bootstrapApplication(SimpleTemplateForm, appConfig  )
   .catch((err) => console.error(err));
