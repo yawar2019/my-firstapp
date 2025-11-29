@@ -5,15 +5,24 @@
   <div class="col-md-4">
     <label for="validationCustom01" class="form-label">First name</label>
     <input type="text" class="form-control" name="firstName" formControlName="firstName" value="Mark" required>
-    <div class="valid-feedback">
-      Looks good!
+    <div class="text-danger">
+     @if(studentForm.controls['firstName'].errors?.['required'] && studentForm.controls['firstName'].touched && studentForm.controls['firstName'].dirty)
+     {
+required
+     }
     </div>
   </div>
   <div class="col-md-4">
     <label for="validationCustom02" class="form-label">Last name</label>
     <input type="text" class="form-control" name="lastName" formControlName="lastName" value="Otto" required>
-    <div class="valid-feedback">
-      Looks good!
+    <div class="text-danger">
+      @if(studentForm.controls['lastName'].errors?.['maxlength']){
+     max 3 characters are allowed
+      }
+      @else if(studentForm.controls['lastName'].errors?.['required'] )
+      {
+required
+      }
     </div>
   </div>
   <div class="col-md-4">
@@ -21,7 +30,7 @@
     <div class="input-group has-validation">
       <span class="input-group-text" id="inputGroupPrepend">@</span>
       <input type="text" class="form-control" name="userName" formControlName="userName" aria-describedby="inputGroupPrepend" required>
-      <div class="invalid-feedback">
+      <div class="intext-danger">
         Please choose a username.
       </div>
     </div>
@@ -29,7 +38,7 @@
   <div class="col-md-6">
     <label for="validationCustom03" class="form-label">City</label>
     <input type="text" class="form-control" name="city" formControlName="city" required>
-    <div class="invalid-feedback">
+    <div class="intext-danger">
       Please provide a valid city.
     </div>
   </div>
@@ -39,14 +48,14 @@
       <option selected disabled value="">Choose...</option>
       <option *ngFor="let state of IndiaStates" value="{{state.id}}">{{state.name}}</option>
     </select>
-    <div class="invalid-feedback">
+    <div class="intext-danger">
       Please select a valid state.
     </div>
   </div>
   <div class="col-md-3">
     <label for="validationCustom05" class="form-label">Zip</label>
     <input type="text" class="form-control" name="zipCode" formControlName="zipCode" required>
-    <div class="invalid-feedback">
+    <div class="intext-danger">
       Please provide a valid zip.
     </div>
   </div>
@@ -56,7 +65,7 @@
       <label class="form-check-label" for="invalidCheck">
         Agree to terms and conditions
       </label>
-      <div class="invalid-feedback">
+      <div class="intext-danger">
         You must agree before submitting.
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-form-example',
@@ -18,13 +18,13 @@ export class ReactiveFormExample {
 
 studentForm:FormGroup=new FormGroup({
 
-firstName:new FormControl(""),
-lastName:new FormControl(""),
+firstName:new FormControl("Deepak",[Validators.required]),
+lastName:new FormControl("",[Validators.required,Validators.maxLength(3)]),
 userName:new FormControl(""),
 city:new FormControl(""),
 state:new FormControl(""),
 zipCode:new FormControl(""),
-IsAgreed:new FormControl(""),
+IsAgreed:new FormControl(true),
 
   })
 

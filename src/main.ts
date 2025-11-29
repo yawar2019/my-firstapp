@@ -6,6 +6,8 @@ import { Contact } from './app/contact/contact';
 import { Layout } from './app/layout/layout';
 import { SimpleTemplateForm } from './app/simple-template-form/simple-template-form';
 import { ReactiveFormExample } from './app/reactive-form-example/reactive-form-example';
+import { FormBuilderExam } from './app/form-builder/form-builder';
 
-bootstrapApplication(SimpleTemplateForm, appConfig  )
+
+bootstrapApplication(FormBuilderExam, appConfig  )
   .catch((err) => console.error(err));
