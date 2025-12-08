@@ -16,7 +16,7 @@
 </label>
 </div>
 </ng-container>
-<div *ngIf="form.get(control.name)?.invalid && form.get(control.name).touched">
+<div *ngIf="form.get(control.name)?.invalid && form.get(control.name)?.touched">
     <small *ngIf="form.get(control.name)?.errors?.['required']">{{control.label}} is required</small>
     <small *ngIf="form.get(control.name)?.errors?.['minlength']">{{control.label}} is minlength required</small>
 

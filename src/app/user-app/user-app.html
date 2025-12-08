@@ -1,0 +1,36 @@
+<div class="container">
+<table class="table table-bordered">
+    <tr>
+        <th>UserId</th>
+        <th>UserName</th>
+        <th>Password</th>
+        <th>Role</th>
+        <th>Action</th>
+    </tr>
+
+    <tr *ngFor="let user of this.service.AllUser">
+        <td>{{user.UserId}}</td>
+        <td>{{user.UserName}}</td>
+        <td>{{user.Password}}</td>
+        <td>{{user.Role}}</td>
+        <td><button (click)="Delete(user.UserId)">Delete</button></td>
+    </tr>
+</table>
+
+
+<h1>USer Registration Form</h1>
+
+<form #userForm="ngForm">
+    <label>User Name</label>
+   <input type="text" name="UserName" [(ngModel)]="this.service.User.UserName" />
+<br>
+  <label>Password</label>
+   <input type="text" name="Password" [(ngModel)]="this.service.User.Password" />
+   <br>
+  <label>Role</label>
+   <input type="text" name="Role" [(ngModel)]="this.service.User.Role"  />
+
+   <input type="button" (click)="userAdd(userForm.value)" class="btn btn-success" value="Save"/>
+</form>
+
+</div>

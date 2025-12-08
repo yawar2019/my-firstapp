@@ -8,7 +8,8 @@ import { SimpleTemplateForm } from './app/simple-template-form/simple-template-f
 import { ReactiveFormExample } from './app/reactive-form-example/reactive-form-example';
 import { FormBuilderExam } from './app/form-builder/form-builder';
 import { Dynamicform } from './app/dynamicform/dynamicform';
+import { UserApp } from './app/user-app/user-app';
 
 
-bootstrapApplication(Dynamicform, appConfig  )
+bootstrapApplication(UserApp, appConfig  )
   .catch((err) => console.error(err));
