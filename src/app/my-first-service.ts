@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { IUser } from './model/User';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -20,15 +20,15 @@ export class MyFirstService {
     UpdatedOn: null
   };
 
-  AllUser:IUser[]=[];
-
+   AllUser:IUser[]=[];
+//AllUser = signal<any[]>([]);
   constructor(private http:HttpClient)
   {
   }
 
   getUsers():Observable<any>
   {
-return this.http.get(this.url+'api/UseApi');
+return this.http.get<any[]>(this.url+'api/UseApi');
   }
 
 
@@ -39,7 +39,9 @@ return this.http.get(this.url+'api/UseApi');
   DeleteUser(UserId:number):Observable<any>
   {
     return this.http.delete(this.url+'api/UseApi/'+UserId)
-
   }
-
+UpdateUser(User?:IUser):Observable<any>
+  {
+    return this.http.put(this.url+'api/UseApi/'+User?.UserId,User)
+  }
 }

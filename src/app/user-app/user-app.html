@@ -8,12 +8,15 @@
         <th>Action</th>
     </tr>
 
-    <tr *ngFor="let user of this.service.AllUser">
+    <tr *ngFor="let user of service.AllUser">
         <td>{{user.UserId}}</td>
         <td>{{user.UserName}}</td>
         <td>{{user.Password}}</td>
         <td>{{user.Role}}</td>
-        <td><button (click)="Delete(user.UserId)">Delete</button></td>
+        <td>
+            <button (click)="Delete(user.UserId)">Delete</button>
+            <button (click)="Edit(user.UserId)">Edit</button>
+        </td>
     </tr>
 </table>
 
@@ -21,6 +24,8 @@
 <h1>USer Registration Form</h1>
 
 <form #userForm="ngForm">
+   <input type="hidden" name="UserId" [(ngModel)]="this.service.User.UserId" />
+
     <label>User Name</label>
    <input type="text" name="UserName" [(ngModel)]="this.service.User.UserName" />
 <br>

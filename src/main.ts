@@ -11,5 +11,5 @@ import { Dynamicform } from './app/dynamicform/dynamicform';
 import { UserApp } from './app/user-app/user-app';
 
 
-bootstrapApplication(UserApp, appConfig  )
+bootstrapApplication(Layout, appConfig  )
   .catch((err) => console.error(err));
