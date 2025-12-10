@@ -1,0 +1,24 @@
+<p>pipe-example works!</p>
+<p>Currency:{{price|currency}}</p>
+<p>Currency:{{price|currency:'INR'}}</p> <br/>
+<p>{{Fname|uppercase}}</p>
+<p>{{MiddleName|titlecase }}</p>
+ <p>{{currentDate}}</p><!--//Wed Dec 10 2025 08:11:19 GMT+0530 (India Standard Time) -->
+<p>{{currentDate|date}}</p><!-- Dec 10, 2025-->
+<p>{{currentDate|date:'fullDate'}}</p><!-- Wednesday, December 10, 2025-->
+<p>{{currentDate|date:'short'}}</p><!-- Wednesday, December 10, 2025-->
+<p>{{currentDate|date:'longDate'}}</p><!--December 10, 20255-->
+<p>{{currentDate|date:'yyyy-MM-dd'}}</p><!-- 2025-02-01-->
+<p>{{currentDate|date:'shortTime'}}</p><!-- 2025-02-01-->
+
+
+<!-- end date filter using Pipe -->
+
+<p>
+{{fruits}}
+</p>
+<p>
+    {{fruits|slice:0:1}}
+</p>
+<p>{{temp|percent}}</p>
+<p>{{Fname|changeCase}}</p>

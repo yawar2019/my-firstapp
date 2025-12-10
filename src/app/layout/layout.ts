@@ -4,10 +4,11 @@ import { About } from '../about/about';
 import { Contact } from '../contact/contact';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { UserApp } from '../user-app/user-app';
+import { PipeExample } from '../pipe-example/pipe-example';
 
 @Component({
   selector: 'app-layout',
-  imports: [Home,About,Contact,UserApp,RouterOutlet,RouterLink,RouterLinkActive],
+  imports: [Home,About,Contact,UserApp,PipeExample,RouterOutlet,RouterLink,RouterLinkActive],
   templateUrl: './layout.html',
   styleUrl: './layout.css',
 })
