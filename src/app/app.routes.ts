@@ -9,10 +9,12 @@ import { AppDeactivateGuardService } from './app-deactivate-guard-service';
 import { TestDeactivate } from './test-deactivate/test-deactivate';
 import { UserApp } from './user-app/user-app';
 import { PipeExample } from './pipe-example/pipe-example';
+import { SignalExample } from './signal-example/signal-example';
 
 export const routes: Routes = [
     {path:'',component:Home},
    {path:'login',component:Login},
+   {path:'signalEx',component:SignalExample},
    {path:'user',component:UserApp},
    {path:'pipe',component:PipeExample},
    {path:'testDeactivate',component:TestDeactivate,canDeactivate:[AppDeactivateGuardService]},

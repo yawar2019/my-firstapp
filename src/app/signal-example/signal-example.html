@@ -1,0 +1,17 @@
+<p>signal-example works!</p>
+
+
+ {{count()}} <!-- reading of signal variable -->
+
+
+ <button (click)="updateSignal()">increment</button>
+
+
+ <ul>
+    <li *ngFor="let user from users()">
+        {{user.name}}
+    </li>
+ </ul>
+
+ <button (click)="addUser()">aad user</button>
+{{this.sig.countSpecVar()}}
