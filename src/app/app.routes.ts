@@ -10,11 +10,15 @@ import { TestDeactivate } from './test-deactivate/test-deactivate';
 import { UserApp } from './user-app/user-app';
 import { PipeExample } from './pipe-example/pipe-example';
 import { SignalExample } from './signal-example/signal-example';
+import { SignalCompox1 } from './signal-compox1/signal-compox1';
+import { Signalcompox2 } from './signalcompox2/signalcompox2';
 
 export const routes: Routes = [
     {path:'',component:Home},
    {path:'login',component:Login},
    {path:'signalEx',component:SignalExample},
+   {path:'signalCompox1',component:SignalCompox1},
+   {path:'signalCompox2',component:Signalcompox2},
    {path:'user',component:UserApp},
    {path:'pipe',component:PipeExample},
    {path:'testDeactivate',component:TestDeactivate,canDeactivate:[AppDeactivateGuardService]},

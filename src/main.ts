@@ -9,7 +9,8 @@ import { ReactiveFormExample } from './app/reactive-form-example/reactive-form-e
 import { FormBuilderExam } from './app/form-builder/form-builder';
 import { Dynamicform } from './app/dynamicform/dynamicform';
 import { UserApp } from './app/user-app/user-app';
+import { AggridExampleComponent } from './app/aggrid-example-component/aggrid-example-component';
 
 
-bootstrapApplication(Layout, appConfig  )
+bootstrapApplication(AggridExampleComponent, appConfig  )
   .catch((err) => console.error(err));
