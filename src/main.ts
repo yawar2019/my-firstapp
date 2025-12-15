@@ -10,7 +10,8 @@ import { FormBuilderExam } from './app/form-builder/form-builder';
 import { Dynamicform } from './app/dynamicform/dynamicform';
 import { UserApp } from './app/user-app/user-app';
 import { AggridExampleComponent } from './app/aggrid-example-component/aggrid-example-component';
+import { HooksOfAnAngular } from './app/hooks-of-an-angular/hooks-of-an-angular';
 
 
-bootstrapApplication(AggridExampleComponent, appConfig  )
+bootstrapApplication(HooksOfAnAngular, appConfig  )
   .catch((err) => console.error(err));

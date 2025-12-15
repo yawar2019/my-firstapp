@@ -11,9 +11,9 @@ ModuleRegistry.registerModules([AllCommunityModule]);
 })
 export class AggridExampleComponent {
 columnDefs:ColDef[] =[
-  {headerName:'EmpId',field:'EmpId'},
-  {headerName:'EmpName',field:'EmpName'},
-  {headerName:'EmpSalary',field:'EmpSalary'},
+  {headerName:'EmpId',field:'EmpId', filter: true},
+  {headerName:'EmpName',field:'EmpName', filter: true},
+  {headerName:'EmpSalary',field:'EmpSalary', filter: true},
 
 ]
 
